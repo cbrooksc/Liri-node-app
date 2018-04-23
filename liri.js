@@ -47,7 +47,7 @@ var Twitter = require("twitter");
  function musicList() {
 debugger;
 
-    spotify.search({ type: 'artist OR album OR track', query: 'paramsSpotify' }, function(err, data) {
+    spotify.search({ type: 'artist', query: paramsSpotify }, function(err, data) {
         if (!err) {
           for (var i = 0; i < data.length; i++);
 
@@ -113,23 +113,17 @@ var comm = process.argv[2];
 
 switch (comm) {
     case "my-tweets":
-    my-tweets();
+        twitterFingers();
         break;
     case "spotify-this-song":
-    spotify-this-song();  
+        musicList();  
         break;
     case "movie-this":
-        movie-this();
+        movieTime();
         break;
-    // case "do-what-it-says":
-    //     do-what-it-says(); 
-    //     break; 
+    case "do-what-it-says":
+        file(); 
+        break; 
     default:
-    
+        console.log('I dont understand you.');
 }
-
-
-twitterFingers();
-musicList();
-movieTime();
-file();
