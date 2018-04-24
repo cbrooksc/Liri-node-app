@@ -13,7 +13,8 @@ var Twitter = require("twitter");
  var paramsTwitter = {
      screen_name: 'cwbrooks_b',
  }
- var require = require("request");
+ var fs = require("fs");
+ var request = require("request");
  var nodeArgs = process.argv;
  var movieName = ""; /* Empty variable for holding the movies */
 
@@ -96,7 +97,7 @@ for(var i = 2; i < nodeArgs.length; i++) {
 }
 
 function file() {
-var fs = require("fs");
+
 fs.readFile("random.txt", "utf8", function(error,data) {
 
     if(error) {
