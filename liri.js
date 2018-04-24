@@ -56,7 +56,6 @@ debugger;
                 console.log(data[i].albums);
                 console.log(data[i].uri);
 
-
         }else if(data[i] === ""){
           console.log("The Sign by Ace of Base.");
       } else {
@@ -98,7 +97,7 @@ for(var i = 2; i < nodeArgs.length; i++) {
 
 function file() {
 var fs = require("fs");
-fs.readFile("I Want it That Way", "utf8", function(error,data) {
+fs.readFile("random.txt", "utf8", function(error,data) {
 
     if(error) {
         return console.log(error);
